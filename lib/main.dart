@@ -1,5 +1,56 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const JardinIQApp());
+}
+
+class JardinIQApp extends StatelessWidget {
+  const JardinIQApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'JardinIQ',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF117A3D),
+        ),
+      ),
+      home: const HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFF7FBF4),
+      appBar: AppBar(
+        title: const Text('JardinIQ'),
+        backgroundColor: const Color(0xFF117A3D),
+        foregroundColor: Colors.white,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text(
+              'Cultivez plus intelligemment 🌱',
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20),
+            Card(child: ListTile(title: Text('🌱 Trouver les bonnes plantes'))),
+            Card(child: ListTile(title: Text('🤖 Conseiller IA JardinIQ'))),
+            Card(child: ListTile(title: Text('📷 Diagnostic photo'))),
+            Card(child: ListTile(title: Text('📐 Créer mon jardin'))),
+            Card(child: ListTile(title: Text('👤 Mon profil'))),import 'package:flutter/material.dart';
+
 
 void main() => runApp(MyApp());
 
